@@ -1,0 +1,39 @@
+{
+    "version": "v1.9",
+    "name": "Quote Assistant${{APP_NAME_SUFFIX}}",
+    "description": "An M365 Copilot declarative agent with the /quote-spark quote skill and /github-repos skill powered by the GitHub Remote MCP server (read-only repository scope).",
+    "instructions": "$[file('instructions.txt')]",
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.8/schema.json",
+    "conversation_starters": [
+        {
+            "title": "Run /quote-spark",
+            "text": "/quote-spark"
+        },
+        {
+            "title": "Leadership Quote",
+            "text": "/quote-spark leadership"
+        },
+        {
+            "title": "List GitHub Repos",
+            "text": "/github-repos"
+        },
+        {
+            "title": "Find Kiota Repo",
+            "text": "/github-repos kiota"
+        }
+    ],
+    "agent_skills": [
+        {
+            "folder": "skills/quote-spark"
+        },
+        {
+            "folder": "skills/github-repos"
+        }
+    ],
+    "actions": [
+        {
+            "id": "action_1",
+            "file": "ai-plugin.json"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.2.0",
+  "default_evaluators": {
+    "Relevance": {},
+    "Coherence": {}
+  },
+  "items": [
+    {
+      "prompt": "/quote-spark leadership",
+      "expected_response": "Management is doing things right; leadership is doing the right things. — Peter F. Drucker",
+      "evaluators": {
+        "PartialMatch": { "case_sensitive": false }
+      },
+      "evaluators_mode": "extend"
+    },
+    {
+      "prompt": "/quote-spark innovation",
+      "expected_response": "The best way to predict the future is to invent it. — Alan Kay",
+      "evaluators": {
+        "PartialMatch": { "case_sensitive": false }
+      },
+      "evaluators_mode": "extend"
+    },
+    {
+      "prompt": "/github-repos microsoft/kiota",
+      "expected_response": "Repository details and metadata for microsoft/kiota retrieved in read-only mode via the GitHub MCP server.",
+      "evaluators": {
+        "Relevance": {},
+        "Coherence": {}
+      },
+      "evaluators_mode": "extend"
+    }
+  ]
+}
